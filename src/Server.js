@@ -1,7 +1,7 @@
 import express from 'express';
 class Server{
     constructor(){
-        this.port = 3000;
+        this.port = process.env.PORT ||3000;
         this.app = express();
         this.initMiddleware();
         this.initRoute();
